@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight checklist</title>
+    <link rel="stylesheet" href="estiloDesafioPL.css">
+</head>
+<body>
+  
+    <header> 
+      <h1>[SITE]</h1>
+      <a href="index.html"></a>
+        <div class="menu">
+            <a href="index.html">Home</a> | 
+            <a href="#servicos">Sobre Nós</a> | 
+            <a href="#projetos">Parcerias</a> |
+            <a href="#conteudo">Checklist</a> | 
+            <a href="#contatos">Contatos</a>    
+        </div>
+        <div class="desafio">
+          <h1>Desafio PL <span>2.0</span></h1>
+        </div>
+    </header>
+    <br><br>
+    <section>
+      <center>
+        <div id="checklist">
+          <div class="typewriter">
+             <h1>SpaceStyleX</h1>
+          </div>
+         
+          <h3>Lista de verificação de voo/ Flight checklist </h3>
+                <div>
+                  <h4>Verifique se os seguintes itens estão em perfeito estado para prosseguir com o voo!</h4>
+                    <table border="1" class="resTabela1">
+                      <ul>  
+                        <div>
+                          <tr>
+                            <th>
+                              <label for="">Baterias: </label>
+                            </th> 
+                            <td>
+                              <input type="radio" name="bate" id="bateria1"> 
+                              <label for="sim">Sim</label>
+                              <input type="radio" name="bate" id="bateria2">
+                              <label for="nao">Nâo</label>
+                            </td>
+                          </tr>                          
+                        </div>
+                        <div>
+                          <tr>
+                            <th>
+                              <label for="">Permissões: </label>
+                            </th>
+                            <td>
+                              <input type="radio" name="permi" id="permicao1"> 
+                              <label for="sim">Sim</label>
+                              <input type="radio" name="permi" id="permicao2">
+                              <label for="nao">Nâo</label>
+                            </td>
+                          </tr>
+                        </div>
+                        <div>
+                          <tr>
+                            <th>
+                              <label for="">Combustível: </label>
+                            </th>
+                            <td>
+                              <input type="radio" name="combo" id="combo1"> 
+                              <label for="sim">Sim</label>
+                              <input type="radio" name="combo" id="combo2">
+                              <label for="nao">Nâo</label><br>
+                            </td>
+                          </tr>  
+                        </div>
+                        <div>
+                          <tr>
+                            <th>
+                              <label for="">Rádios : </label>
+                            </th>
+                            <td>
+                              <input type="radio" name="radi" id="radio1"> 
+                              <label for="sim">Sim</label>
+                              <input type="radio" name="radi" id="radio2">
+                              <label for="nao">Nâo</label><br>
+                            </td>
+                          </tr>
+                        </div> 
+                      </ul>
+                    </table><input class="adicionar" type="button" value="Verificar" onclick="verificar()">
+                </div><br>
+        </div></center>
+
+      <div id="requisitos" class="hidden">
+        <div id="input_requisitos" >
+          <div> 
+            <h3>Verificando Tripulantes</h3> 
+            <div>
+              <div>
+                <table style="text-align: left;"><div class="qwe">
+                  <tr>
+                    <th>
+                      <label>Nome:</label>
+                    </th>
+                    <td>
+                      <input type="text" id="nome1" placeholder="Primeiro Nome ">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label>Data de nascimento:  </label>
+                    </th>
+                    <td>
+                      <input type="date" id="data_nascimento" placeholder="dd">
+                    </td>
+                  </tr>  
+                  <tr>
+                    <th>
+                      <label>Data de ingresso na Empresa: </label>
+                    </th>
+                    <td>
+                      <input type="date" id="expe1" placeholder="Anos de Experiencia">
+                    </td>
+                  </tr>
+                    <tr>
+                      <th>
+                        <div>
+                          <p style="font:italic 15px time;color: white;">
+                            @Requisitos pra viajem<br>
+                              - Ter no mínimo 25 anos de idade. <br>
+                              - Ter 5 anos de experiência. <br>
+                              - Ter no mínimo 21 anos e ter trabalhado no mínimo 2 anos.
+                          </p>
+                        </div>
+                      </th>
+                    </tr>
+                </table>
+                <input class="adicionar" type="button" value="Enviar" onclick="verificar_requisitos()"><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div id="informacoes_requisitos">
+          <div>
+            <div>
+              <div>
+                <table border="1" id="requisitos_tripulacao" style=" text-align:justify">
+                  <tr>
+                    <th>
+                      Informações do Candidato
+                    </th>
+                    <th>
+                      Situação
+                    </th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <input type="button" class="adicionar" value="Tripulantes Verificados" onclick="tripulantes_verificados()"><br>
+      </div>
+      <div id="medidor" class="hidden">
+        <div>
+          <div id="div_medidor">
+            <div>
+              <h3> Medidor de Tripulação da nave SpaceStylex</h3>
+              <h4>Adicione os dados dos 6 Tripulantes</h4>
+              <div>
+                <div>
+                  <table style="text-align: left;"><div class="qwe">
+                    <tr>
+                      <th>
+                        <label>Nome do Tripulante: </label>
+                      </th>
+                      <td>
+                        <input type="text" id="nome_tri" placeholder="Nome do Tripulante " autofocus>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <label>Idade:  </label>
+                      </th>
+                      <td>
+                        <input type="number" id="idade_tri" placeholder="Idade">
+                      </td>
+                    </tr>  
+                    <tr>
+                      <th>
+                        <label>Altura: </label>
+                      </th>
+                      <td>
+                        <input type="number" id="altura_tri" placeholder="Altura em mt">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <label>Peso: </label>
+                      </th>
+                      <td>
+                        <input type="number" id="peso_tri" placeholder="Peso em kg">
+                      </td>
+                    </tr>
+                  </table>
+                  <input class="adicionar" type="button" value="Adicionar Tripulante" onclick="adicionar()"><br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div id="desaparecer_finalizar">
+              <p>Dados do tripulante:</p>
+                <select size="7" style="width: 100%;background-color: rgb(69, 81, 104);color: beige;" id="medidor_tri">
+              
+                </select>
+                <div>
+                  <div id="botao_final" class="hidden">
+                  <input class="adicionar" type="button" value="Finalizar" onclick="finalizar()"><br>
+                  </div>
+                </div>
+                <div id="res_final1">
+
+                </div>
+                <input style="float: right;" type="button" id="final" class="hidden" value="Finalizar Programa" onclick="final()">
+            </div>
+            <br>
+              </div>
+        </div>
+      </div>
+        <div class="hidden" id="saudacoes_finais">
+          <div class="typewriter">
+            <h1>Programa Finalizado!!!</h1>
+            <h1>Faça uma boa viagem</h1>  
+          
+          </div>
+        </div>  
+      
+    </section>
+    
+    <footer>
+       <center>
+        <div class="contatos1">
+            <div class="contatos">
+              <a name="contatos"></a>
+                CONTATOS:
+                  <br>
+                    <img class="whats" src="logow.png"/>
+                    <a target="_blank" href="https://api.whatsapp.com/send?l=pt_BR&phone=5586981042760"<a href>(86) 9 98104-2760</a href>
+                    <br>
+                    <img class="whats" src="instasemnome.png">
+                    <a target="_blank" href="http://instagran.com/ravier_eros_ofc">@ravier_eros_ofc</a><br>
+                    <img class="whats" src="gmail.png" alt="gmail">
+                    <a target="_blank" href="mailto:peritoerosravier.15@gmail.com?Subject=Preciso%20de%20informações">peritoerosravier.15@gmail.com</a href>
+                    <p>Teresina-Pi</p>  
+            </div>
+          
+        </div></center>
+      <p>&copy;2022 by Eros Ravier S. Aragão</p>
+    </footer>
+    
+  <script src="meuDoc.js"></script>  
+</body>
+</html>

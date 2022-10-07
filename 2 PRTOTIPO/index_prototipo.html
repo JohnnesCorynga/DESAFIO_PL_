@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio PL 2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+      <h1>SpaceStyleX</h1>
+    </header>
+<section>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div id="checklist">
+              <h3>Flight checklist</h3>
+                <div>
+                  <label for="">Baterias: </label>
+                  <input type="radio" name="bate" id="bateria1"> 
+                  <label for="sim">Sim</label>
+                  <input type="radio" name="bate" id="bateria2">
+                  <label for="nao">Nâo</label>
+                </div>
+                <div>
+                  <label for="">Permissões: </label>
+                  <input type="radio" name="permi" id="permicao1"> 
+                  <label for="sim">Sim</label>
+                  <input type="radio" name="permi" id="permicao2">
+                  <label for="nao">Nâo</label>
+                </div>
+                <div>
+                  <label for="">Combustível: </label>
+                  <input type="radio" name="combo" id="combo1"> 
+                  <label for="sim">Sim</label>
+                  <input type="radio" name="combo" id="combo2">
+                  <label for="nao">Nâo</label><br> 
+                </div> 
+                <div>
+                  <label for="">Rádios : </label>
+                  <input type="radio" name="radi" id="radio1"> 
+                  <label for="sim">Sim</label>
+                  <input type="radio" name="radi" id="radio2">
+                  <label for="nao">Nâo</label><br>
+                </div> 
+                <input class="adicionar" type="button" value="Verificar" onclick="verificar()">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+</section>
+<section>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <h3>Verificando Tripulantes</h3> 
+            <div>
+              <div>
+                <label>Nome:</label>
+                <input type="text" id="nome1" placeholder="Primeiro Nome ">
+              </div>
+              <div>
+                <label>Data de nascimento:  </label>
+                <input type="date" id="data_nascimento" placeholder="dd">
+              </div>
+              <div>
+                <label>Data de ingresso na Empresa: </label>
+                <input type="date" id="expe1" placeholder="Anos de Experiencia">
+              </div>
+                <p class="requisitos_escritos">
+                @Requisitos pra viajem<br>
+                - Ter no mínimo 25 anos de idade. <br>
+                - Ter 5 anos de experiência. <br>
+                - Ter no mínimo 21 anos e ter trabalhado no mínimo 2 anos.
+                </p>
+                <input class="adicionar" type="button" value="Verificar" onclick="verificar_requisitos()"><br>
+          </div>
+            <div>
+              <table id="requisitos_tripulacao">
+
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div id="div_medidor">
+            <h3> Medidor de Tripulação da nave SpaceStylex</h3>
+            <h4>Adicione os dados dos 6 Tripulantes</h4>
+            <div>
+              <label>Nome do Tripulante: </label>
+              <input type="text" id="nome_tri" placeholder="Nome do Tripulante ">
+            </div>
+            <div> 
+              <label>Idade: </label>
+              <input type="number" id="idade_tri" placeholder="Idade">
+            </div>  
+            <div>
+              <label>Altura: </label>
+              <input type="number" id="altura_tri" placeholder="Altura em mt">
+            </div>
+            <div> 
+              <label>Peso: </label>
+              <input type="number" id="peso_tri" placeholder="Peso em kg">
+            </div>                 
+              <div id="botao_adicionar">
+                <input class="adicionar"  type="button" value="Adicionar Tripulante" onclick="adicionar()"><br>
+              </div>
+          </div>
+            <div>
+              <div class="hidden"  id="div_medidor_final">
+
+              </div>
+            </div>       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>   
+              <p>Dados do tripulante:</p>
+              <select size="7" style="width: 100%;background-color: rgb(69, 81, 104);color: beige;" id="medidor_tri">
+            
+              </select>
+              <div id="botao_final" class="hidden">
+                <input class="adicionar" type="button" value="Finalizar" onclick="finalizar()"><br>
+              </div>
+              <div id="res_final1">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+<footer>
+<p class="nome_embaixo">&copy; 2022 by Eros Ravier S. Aragão</p>
+</footer>
+
+<script src="prototipo.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body{
+    background: rgb(57, 68, 216);
+    font: normal 15pt Arial;
+
+}
+header {
+    color: white;
+    text-align: center;
+    }
+section {
+    padding: 80pt;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+}
+.hidden{
+    display: none;
+}
+.requisitos_escritos,.nome_embaixo{
+    font:italic 15px time;
+    color: white;
+}
+button:active{
+    color: brown;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    }
